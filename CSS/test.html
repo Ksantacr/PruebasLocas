@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+	<link rel="stylesheet" href="estilo-test.css">
+	<title>Test Jquery</title>
+</head>
+<body>
+
+	<header>
+		<h1>Probando los eventos upslide , downslide :D</h1>
+		<h2>Me siento noob xD!!!</h2>
+	</header>
+	<section>
+		<article>
+			<div class="imagen">
+			</div>
+			<div class="botones">
+			<a href="#" class="slideup">SLIDEUP</a>
+			<a href="#" class="slidedown">SLIDEDOWN</a>
+			<a href="#" class="hide">HIDE</a>
+			<a href="#" class="show">SHOW</a>
+			<a href="#" class="fadein">FADEIN</a>
+			<a href="#" class="fadeout">FADEOUT</a>
+			<a href="#" class="center">CENTER</a>
+			<a href="#" class="fadeto">FADETO</a>
+			<a href="#" class="animate">ANIMATE</a>
+			</div>
+		</article>
+	</section>
+
+	<script>
+		$("a").on('click',activarEfecto);
+		function activarEfecto(ev){
+			evento = ev.currentTarget.className;
+			elem = $(this);
+			if(evento == "slideup")
+				elem.slideUp();
+			if(evento == "slidedown")
+				elem.slideDown();
+			if(evento == "hide")
+				elem.hide();
+			if (evento == "show")
+				elem.show();
+			if (evento == "fadein")
+				elem.fadeIn();
+			if (evento == "fadeout")
+				elem.fadeOut();
+			if (evento == "fadeto")
+				elem.fadeTo("1",0);
+			if (evento == "animate")
+				$(".slideup").toggle();
+			console.log(evento);
+
+		}
+	</script>
+
+	
+</body>
+</html>
